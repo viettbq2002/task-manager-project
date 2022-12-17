@@ -1,4 +1,11 @@
-require("dotenv").config();
-console.log("Task Manager App");
+const express = require("express");
+const app = express();
 
-console.log(process.env.MONGO_URL);
+const port = 3030;
+app.get("/", (req, res) => {
+  res.send("Test ");
+});
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+  console.log(`go to the app http://localhost:${port}`);
+});
